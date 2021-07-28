@@ -5,7 +5,7 @@
 */
 //
 // Scripts
-// 
+//
 
 window.addEventListener('DOMContentLoaded', event => {
 
@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
     };
 
-    // Shrink the navbar 
+    // Shrink the navbar
     navbarShrink();
 
     // Shrink the navbar when page is scrolled
@@ -51,9 +51,17 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+    const buttonDownload = document.body.querySelector('.btn-download');
+    if (buttonDownload) {
+      buttonDownload.addEventListener('click', () => {
+          document.location.href = 'https://play.google.com/store/apps/details?id=com.github.xwanlion.lifeauctioneer';
+      });
+    }
+
     // Activate SimpleLightbox plugin for portfolio items
     new SimpleLightbox({
         elements: '#portfolio a.portfolio-box'
     });
+
 
 });
